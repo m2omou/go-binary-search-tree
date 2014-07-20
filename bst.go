@@ -15,12 +15,12 @@ type Bst struct {
 }
 
 /* Get size of the tree */
-func (bst *Bst) getSize() int {
+func (bst *Bst) Size() int {
 	return bst.size
 }
 
 /* Get size of the tree */
-func (bst *Bst) getRoot() *Node {
+func (bst *Bst) Root() *Node {
 	return bst.root
 }
 
