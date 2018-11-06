@@ -31,3 +31,21 @@ func showPostOrder(root *Node) {
 		showInOrder(root.right)
 	}
 }
+
+// BFS Traversal
+// Print the tree level-order
+// Traverse root/parent, left child, right child
+func showLevelOrder(root *Node) {
+	queue := []*Node{root}
+	for (len(queue) != 0) {
+		current := queue[0]
+		fmt.Println(current.data)
+		if (current.left != nil) {
+			queue = append(queue, current.left)
+		}	
+		if (current.right != nil) {
+			queue = append(queue, current.right)
+		}
+		queue = append(queue[:0], queue[1:]...)
+	}
+}
